@@ -1,0 +1,648 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer components {
+  .socialIcon {
+    @apply w-11 border-[1px] border-blue-400 border-solid h-11 rounded-full px-2 py-1 text-pink-500  hover:text-blue-400 cursor-pointer transition duration-200 hover:animate-pulse;
+  }
+} */
+
+/* @font-face {
+  font-family: 'Regular';
+  src: url('/src/assets/fonts/Nunito-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Medium';
+  src: url('/src/assets/fonts/Nunito-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bold';
+  src: url('/src/assets/fonts/Nunito-Bold.ttf') format('truetype');
+}
+
+html {
+} */
+
+body {
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;
+  color: #3b3b3b;
+}
+
+.font-nunito {
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;
+}
+
+.text-korean {
+  font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+.ant-typography,
+.ant-btn,
+.ant-input,
+.ant-select-selector,
+.ant-menu,
+.ant-tabs,
+.ant-table {
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;
+}
+
+.react-calendar {
+  border: unset;
+  background-color: transparent;
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif !important;
+}
+.react-calendar__navigation__prev2-button {
+  display: none;
+}
+.react-calendar__navigation__next2-button {
+  display: none;
+}
+.react-calendar__navigation {
+  align-items: center;
+}
+abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: unset;
+  text-decoration: unset;
+  -webkit-text-decoration: unset;
+  -webkit-text-decoration: unset;
+  text-decoration: unset !important;
+}
+.react-calendar__navigation__prev-button {
+  background-color: #4318ff !important;
+  border-radius: 10px;
+  min-width: 34px !important;
+  height: 34px !important;
+  color: white;
+}
+.react-calendar__navigation__next-button {
+  background-color: #4318ff !important;
+  border-radius: 10px;
+  min-width: 34px !important;
+  width: 34px !important;
+  height: 34px !important;
+  color: white;
+}
+.react-calendar__navigation__label {
+  font-weight: 700 !important;
+  font-size: 18px;
+}
+.react-calendar__navigation__label:hover,
+.react-calendar__navigation__label:focus {
+  background-color: unset !important;
+  border-radius: 10px;
+}
+.react-calendar__tile {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px !important;
+  height: 34px !important;
+  color: #1b2559;
+}
+.react-calendar__month-view__weekdays {
+  background-color: #f4f7fe;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+.react-calendar__tile--now,
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background-color: #f4f7fe;
+  border-radius: 10px;
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #b0bbd5;
+}
+.react-calendar__tile--active,
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #4318ff;
+  border-radius: 10px;
+  color: white;
+}
+.react-calendar__tile--range,
+.react-calendar__tile--range:enabled:hover,
+.react-calendar__tile--range:enabled:focus {
+  background: #f4f7fe;
+  color: #4318ff;
+  border-radius: 0px;
+}
+.react-calendar__tile--rangeStart,
+.react-calendar__tile--rangeStart:enabled:hover,
+.react-calendar__tile--rangeStart:enabled:focus {
+  background: #4318ff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: white;
+}
+.react-calendar__tile--rangeEnd,
+.react-calendar__tile--rangeEnd:enabled:hover,
+.react-calendar__tile--rangeEnd:enabled:focus {
+  background: #4318ff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+
+/* DARK MODE */
+
+body.dark .react-calendar {
+  border-radius: 30px;
+}
+body.dark .react-calendar__navigation__prev-button {
+  background-color: #7551ff !important;
+}
+body.dark .react-calendar__navigation__next-button {
+  background-color: #7551ff !important;
+  color: white;
+}
+body.dark .react-calendar__tile {
+  color: white;
+}
+body.dark .react-calendar__tile:enabled:hover,
+body.dark .react-calendar__tile:enabled:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.dark .react-calendar__month-view__weekdays {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.dark .react-calendar__tile--now,
+body.dark .react-calendar__tile--now:enabled:hover,
+body.dark .react-calendar__tile--now:enabled:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.dark .react-calendar__month-view__days__day--neighboringMonth {
+  color: #b0bbd5;
+}
+body.dark .react-calendar__tile--active,
+body.dark .react-calendar__tile--active:enabled:hover,
+body.dark .react-calendar__tile--active:enabled:focus {
+  background: #7551ff;
+  color: white;
+}
+body.dark .react-calendar__tile--range,
+body.dark .react-calendar__tile--range:enabled:hover,
+body.dark .react-calendar__tile--range:enabled:focus {
+  background: rgba(255, 255, 255, 0.1);
+  color: #7551ff;
+}
+body.dark .react-calendar__tile--rangeStart,
+body.dark .react-calendar__tile--rangeStart:enabled:hover,
+body.dark .react-calendar__tile--rangeStart:enabled:focus {
+  background: #7551ff;
+  color: white;
+}
+body.dark .react-calendar__tile--rangeEnd,
+body.dark .react-calendar__tile--rangeEnd:enabled:hover,
+body.dark .react-calendar__tile--rangeEnd:enabled:focus {
+  background: #7551ff;
+  color: white;
+}
+
+/* body.dark .ant-table-thead .ant-table-cell {
+  background-color: #161D41;
+  color: white;
+  border: 1px solid white;
+} */
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin: 0 5px;
+  text-align: center;
+  overflow: hidden;
+  height: 400px;
+}
+
+.carousel-item.center {
+  height: 400px;
+  width: 100%;
+}
+
+.carousel-item:not(.center) {
+  width: 40px;
+  opacity: 0.7;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #007bff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  z-index: 40;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.prev {
+  left: -20px;
+}
+
+.next {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+}
+
+.slick-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slick-slide {
+  position: relative;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Custom arrow styling */
+.slick-prev,
+.slick-next {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.carousel-button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Custom dots styling */
+.slick-dots li button:before {
+  color: #f5c102;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+.area-border {
+  border: 0px !important;
+}
+.hover-button-qa:hover {
+  color: white !important;
+  border: none !important;
+  width: '80px' !important;
+}
+.row-unseen {
+  background-color: #f8f8f8 !important;
+}
+.ant-popconfirm-buttons {
+  display: flex !important;
+  justify-content: center !important;
+}
+.ant-popover-inner {
+  width: 409px !important;
+  padding: 30px !important;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-tabs .ant-tabs-ink-bar {
+  position: absolute;
+  background: #3b3b3b;
+  pointer-events: none;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-switch.ant-switch-checked {
+  background: #b5955e !important;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
+  background: #b5955e !important;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-switch:hover:not(.ant-switch-disabled) {
+  background: rgba(0, 0, 0, 0.45) !important;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-table-wrapper .ant-table-cell,
+:where(.css-dev-only-do-not-override-qnu6hi).ant-table-wrapper .ant-table-thead > tr > th,
+:where(.css-dev-only-do-not-override-qnu6hi).ant-table-wrapper .ant-table-tbody > tr > th,
+:where(.css-dev-only-do-not-override-qnu6hi).ant-table-wrapper .ant-table-tbody > tr > td,
+:where(.css-dev-only-do-not-override-qnu6hi).ant-table-wrapper tfoot > tr > th,
+:where(.css-dev-only-do-not-override-qnu6hi).ant-table-wrapper tfoot > tr > td {
+  padding: 16px 10px;
+  overflow-wrap: break-word;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-otp .ant-otp-input {
+  text-align: center;
+  padding-inline: 4px;
+  height: 44px;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-dropdown,
+:where(.css-dev-only-do-not-override-qnu6hi).ant-dropdown-menu-submenu {
+  width: 200px;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-dropdown .ant-dropdown-menu,
+:where(.css-dev-only-do-not-override-qnu6hi).ant-dropdown-menu-submenu .ant-dropdown-menu {
+  padding: 28px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* :where(.css-dev-only-do-not-override-qnu6hi).ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item,
+:where(.css-dev-only-do-not-override-qnu6hi).ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item {
+  border-bottom: 1px solid black;
+} */
+
+/* .ant-dropdown-menu-title-content {
+  border-bottom: 1px solid black;
+} */
+
+.slick-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+@media (max-width: 375px) {
+  .img-product {
+    width: 160px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-placeholder::placeholder {
+    visibility: hidden;
+    font-size: 10px;
+  }
+}
+
+.custom-table .ant-table-thead > tr > th {
+  text-align: center;
+}
+
+/* Áp dụng cho thanh cuộn */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 6px; /* Độ cao của scrollbar ngang */
+  width: 6px; /* Độ rộng của scrollbar dọc */
+}
+
+/* Track của scrollbar */
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Màu nền của track */
+  border-radius: 10px; /* Bo tròn track */
+}
+
+/* Thumb của scrollbar */
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #d3d2d2; /* Màu sắc của thumb */
+  border-radius: 10px; /* Bo tròn thumb */
+}
+
+/* Hiệu ứng khi hover lên thumb */
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #d3d2d2; /* Màu khi hover */
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-skeleton.ant-skeleton-element .ant-skeleton-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  line-height: 96px;
+  object-fit: cover;
+}
+
+.ant-table-content {
+  min-height: 480px; /* Đặt chiều cao tối thiểu */
+  padding-bottom: 10px;
+  overflow-y: hidden; /* Ẩn cuộn dọc */
+}
+
+/* Phần Overlay để làm nền tối */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Phần container modal */
+.modal-container {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Hiệu ứng fadeIn */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Hiệu ứng slide-in từ dưới lên */
+@keyframes slideIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Tùy chỉnh cho phần nội dung modal */
+.modal-container .relative {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Phần nội dung bên trong */
+.modal-container .absolute {
+  position: absolute;
+}
+
+.close-btn:hover {
+  color: #f00;
+}
+
+/* Effect */
+.pulse {
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(#8a82fb, #407ed7);
+  margin: auto;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 50px;
+  color: #ffffff;
+}
+.pulse:before,
+.pulse:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #8a82fb;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.7;
+}
+.pulse:before {
+  animation: pulse 2s ease-out infinite;
+}
+.pulse:after {
+  animation: pulse 2s 1s ease-out infinite;
+}
+@keyframes pulse {
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.effect-seemore {
+  height: 40px;
+  width: 300px;
+  /* background: linear-gradient(#8a82fb, #407ed7); */
+  margin: auto;
+  display: grid;
+  place-items: center;
+  font-size: 50px;
+  color: #ffffff;
+  border-radius: 8px;
+}
+.effect-seemore:before,
+.effect-seemore:after {
+  content: '';
+  position: absolute;
+  height: 44px;
+  width: 320px;
+  background-color: #8a82fb;
+  z-index: -1;
+  opacity: 0.7;
+  border-radius: 8px;
+}
+.effect-seemore:before {
+  animation: effect-seemore 2s ease-out infinite;
+}
+.effect-seemore:after {
+  animation: effect-seemore 2s 1s ease-out infinite;
+}
+@keyframes effect-seemore {
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes shake-stop {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-50%, -50%) rotate(-10deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+}
+
+.shake-stop {
+  animation: shake-stop 3s ease-in-out infinite; /* 3s để bao gồm cả rung và dừng */
+}

@@ -19,7 +19,7 @@ export default function Features() {
           return (
             <div
               key={index}
-              className='flex items-center justify-center cursor-pointer gap-4 border rounded-lg px-4 h-24 w-[320px] bg-white shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]'
+              className='flex items-center justify-center cursor-pointer gap-4 border rounded-lg px-4 h-24 w-[320px] bg-white shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] hover:bg-[#E9D2A9] hover:text-white'
             >
               <img src={category.image} alt='image' className='w-10 h-10 object-contain' />
               <div>
